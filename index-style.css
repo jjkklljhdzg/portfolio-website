@@ -1,0 +1,856 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding-top: 20px;
+}
+
+h2 {
+  font-size: 16px;
+  font-family: Philosopher;
+  font-weight: normal;
+  color: #F9F6CE;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 12px;
+  font-family: Philosopher;
+  color: #F9F6CE;
+  font-weight: lighter;
+}
+
+.github-link {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 11px;
+}
+
+.light-button {
+  background-color: #F9F6CE;
+  outline: none;
+  border-radius: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+}
+
+.light-button:hover {
+  background-color: #FFFACD;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 246, 206, 0.3);
+}
+
+.light-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(249, 246, 206, 0.2);
+}
+
+.light-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(249, 246, 206, 0.5);
+}
+
+.light-button span {
+  font-size: 10px;
+  font-family: Philosopher;
+  color: #0D1C1F;
+  font-weight: lighter;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Стили для первой секции (Образование и Навыки) */
+.card-section1 {
+  margin-top: 27px;
+  box-shadow: 0 0 10px 0 rgba(249, 246, 206, 1);
+  background-color: #0D1C1F;
+  padding: 10px;
+  min-width: 271px;
+  max-width: 412px;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  color: #F9F6CE;
+}
+
+.card-section1 p {
+  margin-top: 11px;
+  font-size: 10px;
+  font-family: Philosopher;
+  color: #F9F6CE;
+  font-weight: lighter;
+}
+
+.card-section1 div {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  justify-content: center;
+}
+
+div h4 {
+  font-size: 12px;
+  font-family: Philosopher;
+  color: #F9F6CE;
+  font-weight: lighter;
+}
+
+div .skills {
+  background-color: #F9F6CE;
+  border-radius: 10px;
+  padding: 2px 10px;
+  margin-top: 11px;
+  font-size: 10px;
+  font-family: Philosopher;
+  color: #0D1C1F;
+  font-weight: lighter;
+}
+
+main h2 {
+  margin-top: 27px;
+  text-align: center;
+}
+
+/* стили для карточек проектов */
+.card-section2 {
+  margin-top: 27px;
+  box-shadow: 0 0 10px 0 rgba(249, 246, 206, 1);
+  background-color: #0D1C1F;
+  padding: 10px;
+  min-width: 271px;
+  max-width: 412px;
+  width: 100%;
+  border-radius: 8px;
+  color: #F9F6CE;
+}
+
+.card-section2 h4 {
+  text-align: center;
+  font-size: 12px;
+  font-family: Philosopher;
+  color: #F9F6CE;
+  font-weight: lighter;
+  margin-bottom: 11px;
+}
+
+.card-section2 p {
+  margin-top: 11px;
+  font-size: 10px;
+  font-family: Philosopher;
+  color: #F9F6CE;
+  font-weight: lighter;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Базовые стили для кнопки "Читать дальше" */
+.read-more-button {
+  display: none;
+  /* Скрываем по умолчанию на мобильных */
+  background: none;
+  border: none;
+  color: #F9F6CE;
+  font-family: Philosopher;
+  font-size: 10px;
+  font-weight: lighter;
+  cursor: pointer;
+  margin-top: 5px;
+  padding: 0;
+  text-decoration: underline;
+  align-self: flex-start;
+  transition: color 0.3s ease;
+}
+
+.read-more-button:hover {
+  color: #FFFACD;
+}
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-start;
+  margin-top: 11px;
+}
+
+.card-section2 .skills {
+  background-color: #F9F6CE;
+  border-radius: 10px;
+  padding: 2px 10px;
+  font-size: 10px;
+  font-family: Philosopher;
+  color: #0D1C1F;
+  font-weight: lighter;
+  white-space: nowrap;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 11px;
+  align-items: baseline;
+}
+
+.project-buttons a {
+  display: inline-flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 24px;
+  vertical-align: baseline;
+}
+
+.project-buttons button {
+  all: unset;
+  font-family: Philosopher;
+  box-sizing: border-box;
+  min-width: 70px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: lighter;
+  white-space: nowrap;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 12px;
+  margin: 0;
+}
+
+.project-buttons .dark-button {
+  background-color: #0D1C1F;
+  color: #F9F6CE;
+  box-shadow: 0 0 10px 0 rgba(249, 246, 206, 1);
+}
+
+.project-buttons .light-button {
+  background-color: #F9F6CE;
+  color: #0D1C1F;
+  gap: 4px;
+}
+
+.project-buttons .dark-button:hover {
+  background-color: #F9F6CE;
+  color: #0D1C1F;
+  transform: translateY(-2px);
+}
+
+.project-buttons .light-button:hover {
+  background-color: #FFFACD;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 246, 206, 0.3);
+}
+
+.project-buttons .light-button span {
+  font-size: 10px;
+  font-family: Philosopher;
+  color: #0D1C1F;
+  font-weight: lighter;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.project-buttons .light-button img {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.project-buttons {
+  align-items: center;
+}
+
+.project-buttons>* {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+}
+
+.project-buttons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(auto, max-content);
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ... (весь код до медиа-запросов остается без изменений) ... */
+
+/* Медиа-запрос для планшетов (768px – 1023px) - ОРИГИНАЛЬНЫЕ СТИЛИ */
+@media (min-width: 768px) and (max-width: 1439px) {
+
+  /* Заголовки в шапке */
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  /* Кнопка GitHub в шапке */
+  .light-button span {
+    font-size: 16px;
+  }
+
+  .light-button img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .light-button {
+    padding: 8px 16px;
+    border-radius: 24px;
+  }
+
+  /* Карточки "Образование" и "Навыки" */
+  .card-section1 {
+    padding: 16px;
+    max-width: 500px;
+    margin-top: 40px;
+    border-radius: 12px;
+  }
+
+  .card-section1 h4 {
+    font-size: 20px;
+  }
+
+  .card-section1 div img {
+    width: auto;
+    height: 26px;
+  }
+
+  .card-section1 p {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .card-section1 div {
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  div .skills {
+    padding: 5px 15px;
+    margin-top: 11px;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+
+  /* Заголовок "Проекты" */
+  main h2 {
+    margin-top: 40px;
+    font-size: 24px;
+  }
+
+  /* Карточки проектов */
+  .card-section2 {
+    padding: 20px;
+    max-width: 500px;
+    margin-top: 40px;
+    border-radius: 12px;
+    position: relative;
+  }
+
+  .card-section2 h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .card-section2 p {
+    font-size: 16px;
+    margin-top: 15px;
+    line-height: 1.5;
+  }
+
+  /* Плашки стека в проектах - такие же как в навыках */
+  .card-section2 .skills {
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  .project-skills {
+    margin-bottom: 5px;
+  }
+
+  .project-buttons {
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .project-buttons button {
+    height: 32px;
+    font-size: 14px;
+    min-width: 85px;
+    padding: 6px 18px;
+    border-radius: 20px;
+  }
+
+  .project-buttons .light-button img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .project-buttons .light-button span {
+    font-size: 14px;
+  }
+
+  /* Отступ снизу от всего контента */
+  body.magical-forest {
+    padding-bottom: 40px;
+  }
+}
+
+/* Десктопы больше 1440px (только здесь будет кнопка "Читать дальше") */
+@media (min-width: 1440px) {
+
+  /* Заголовки в шапке */
+  h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  /* Кнопка GitHub в шапке */
+  .github-link {
+    margin-top: 20px;
+  }
+
+  .light-button span {
+    font-size: 18px;
+  }
+
+  .light-button img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .light-button {
+    padding: 10px 20px;
+    border-radius: 28px;
+  }
+
+  /* Основной контент */
+  main {
+    padding: 0 40px;
+  }
+
+  /* Секция "Образование" и "Навыки" - расположение в ряд */
+  main>section:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 1200px;
+    margin-top: 40px;
+  }
+
+  .card-section1 {
+    padding: 30px;
+    max-width: 100%;
+    margin-top: 0;
+    height: 100%;
+    border-radius: 12px;
+  }
+
+  .card-section1 h4 {
+    font-size: 22px;
+  }
+
+  .card-section1 div img {
+    width: auto;
+    height: 28px;
+  }
+
+  .card-section1 p {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .card-section1 div {
+    gap: 10px;
+  }
+
+  div .skills {
+    padding: 6px 16px;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+
+  /* Заголовок "Проекты" */
+  main h2 {
+    margin-top: 60px;
+    font-size: 28px;
+  }
+
+  /* Карточки проектов - расположение в три колонки с авто-рядами */
+  main>section:last-of-type {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(400px, auto);
+    /* Минимальная высота, но может расти */
+    gap: 40px;
+    max-width: 1300px;
+    width: 100%;
+    align-items: start;
+    /* Выравниваем по верху, а не растягиваем */
+  }
+
+  .card-section2 {
+    padding: 30px;
+    max-width: 100%;
+    margin-top: 0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* Высота автоматическая */
+    min-height: 400px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .card-section2 h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  /* Скрываем часть длинных описаний на больших экранах */
+  .card-section2 p {
+    font-size: 16px;
+    margin-top: 12px;
+    line-height: 1.5;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  /* Только для текста с классом expandable-text */
+  .card-section2 .expandable-text {
+    max-height: 100px;
+  }
+
+  /* Градиент для плавного скрытия текста */
+  .card-section2 .expandable-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #0D1C1F);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Кнопка "Читать дальше" - показываем только на экранах больше 1440px */
+  .card-section2 .read-more-button {
+    display: inline-flex;
+    background: none;
+    border: none;
+    color: #F9F6CE;
+    font-family: Philosopher;
+    font-size: 14px;
+    font-weight: lighter;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    padding: 0;
+    text-decoration: underline;
+    align-self: flex-start;
+    transition: color 0.3s ease;
+    z-index: 2;
+    position: relative;
+  }
+
+  .card-section2 .read-more-button:hover {
+    color: #FFFACD;
+  }
+
+  /* Класс для развернутого текста */
+  .card-section2.expanded {
+    /* Не меняем min-height, чтобы не влиять на сетку */
+  }
+
+  .card-section2.expanded .expandable-text {
+    max-height: 1000px !important;
+    /* Большое значение для полного раскрытия */
+    overflow: visible;
+  }
+
+  .card-section2.expanded .expandable-text::after {
+    opacity: 0 !important;
+    display: none;
+  }
+
+  /* Плашки стека в проектах - такие же как в навыках */
+  .card-section2 .skills {
+    font-size: 16px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  .project-skills {
+    margin-bottom: 5px;
+  }
+
+  .project-buttons {
+    margin-top: auto;
+    gap: 12px;
+    padding-top: 15px;
+  }
+
+  .project-buttons button {
+    height: 32px;
+    font-size: 14px;
+    min-width: 80px;
+    padding: 6px 16px;
+  }
+
+  .project-buttons .light-button img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .project-buttons .light-button span {
+    font-size: 14px;
+  }
+
+  /* Отступ снизу от всего контента */
+  body.magical-forest {
+    padding-bottom: 60px;
+  }
+}
+
+/* Остальной CSS код (шрифты, анимации фона) остается без изменений */
+@font-face {
+  font-family: Philosopher;
+  src: url(Philosopher-Regular.ttf);
+}
+
+/* Стили для фона */
+.magical-forest {
+  background-color: #0D1C1F;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Основной слой светлячков*/
+.magical-forest::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    /* Мелкие светлячки (2 шт) */
+    radial-gradient(circle at 15% 25%, rgba(255, 255, 200, 0.7) 1px, transparent 3px),
+    radial-gradient(circle at 65% 45%, rgba(255, 248, 170, 0.8) 1px, transparent 3px),
+
+    /* Средние светлячки (2 шт) */
+    radial-gradient(circle at 35% 65%, rgba(255, 240, 180, 0.6) 2px, transparent 6px),
+    radial-gradient(circle at 85% 25%, rgba(255, 255, 190, 0.7) 2px, transparent 7px),
+
+    /* Крупные светлячки (2 шт) */
+    radial-gradient(circle at 25% 75%, rgba(255, 255, 180, 0.4) 3px, transparent 12px),
+    radial-gradient(circle at 75% 55%, rgba(255, 248, 160, 0.5) 3px, transparent 14px);
+
+  background-size:
+    250px 250px,
+    /* Мелкие */
+    220px 220px,
+
+    320px 320px,
+    /* Средние */
+    300px 300px,
+
+    420px 420px,
+    /* Крупные */
+    380px 380px;
+
+  opacity: 0.35;
+  animation: fireflies 30s infinite linear;
+  z-index: 1;
+  filter: blur(0.3px);
+}
+
+/* Второй слой*/
+.magical-forest::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    /*3 дополнительных светлячка */
+    radial-gradient(circle at 20% 40%, rgba(255, 255, 220, 0.4) 1px, transparent 4px),
+    radial-gradient(circle at 50% 80%, rgba(255, 240, 170, 0.5) 2px, transparent 8px),
+    radial-gradient(circle at 80% 20%, rgba(255, 248, 180, 0.3) 1px, transparent 3px);
+
+  background-size:
+    280px 280px,
+    350px 350px,
+    240px 240px;
+
+  opacity: 0.25;
+  animation: fireflies-reverse 35s infinite linear;
+  z-index: 1;
+  filter: blur(0.2px);
+}
+
+/* Блики */
+.magical-forest .firefly-sparkles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 40% 60%, rgba(255, 255, 180, 0.2) 4px, transparent 30px);
+  background-size: 500px 500px;
+  animation: sparkle 50s infinite ease-in-out;
+  z-index: 1;
+  mix-blend-mode: soft-light;
+}
+
+/* Плавная анимация */
+@keyframes fireflies {
+  0% {
+    background-position:
+      0px 0px, 0px 0px,
+      0px 0px, 0px 0px,
+      0px 0px, 0px 0px;
+  }
+
+  100% {
+    background-position:
+      250px 500px, -220px 350px,
+      320px -400px, -300px 250px,
+      420px 300px, -380px 450px;
+  }
+}
+
+@keyframes fireflies-reverse {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+
+  100% {
+    background-position:
+      -280px -450px, 350px 300px, -240px 350px;
+  }
+}
+
+/* Медленное мерцание */
+@keyframes sparkle {
+
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: scale(0.98);
+  }
+
+  50% {
+    opacity: 0.25;
+    transform: scale(1.02);
+  }
+}
+
+/* Легкое мерцание основным светлячкам */
+@keyframes gentle-twinkle {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.magical-forest::before {
+  animation:
+    fireflies 30s infinite linear,
+    gentle-twinkle 8s infinite ease-in-out;
+}
+
+.magical-forest::after {
+  animation:
+    fireflies-reverse 35s infinite linear,
+    gentle-twinkle 10s infinite ease-in-out 2s;
+}
+
+/* Тонкий эффект тумана */
+.magical-forest .forest-mist {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 40% 30%,
+      transparent 40%,
+      rgba(13, 28, 31, 0.4) 80%);
+  z-index: 0;
+  animation: mist 80s infinite alternate ease-in-out;
+}
+
+@keyframes mist {
+  0% {
+    background-position: 0% 0%;
+    opacity: 0.2;
+  }
+
+  100% {
+    background-position: 100% 100%;
+    opacity: 0.4;
+  }
+}

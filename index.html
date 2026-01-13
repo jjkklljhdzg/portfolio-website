@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Софья Сидорова - Frontend разработчик</title>
+    <link rel="stylesheet" href="index-style.css">
+</head>
+
+<body class="magical-forest">
+
+    <div class="forest-mist"></div>
+    <div class="firefly-sparkles"></div>
+
+    <header>
+        <h2>Софья Сидорова</h2>
+        <h3>Frontend-разработчик (Junior)</h3>
+
+        <a href="https://github.com/jjkklljhdzg" class="github-link">
+            <button class="light-button">
+                <img src="github_logo.svg" alt="Логотип GitHub">
+                <span>GitHub</span>
+            </button>
+        </a>
+    </header>
+
+    <main>
+        <section>
+            <div class="card-section1">
+                <div>
+                    <img src="education.svg" alt="Шапочка">
+                    <h4>Образование</h4>
+                </div>
+                <p>Колледж экономики и информатики им. А.Н. Афанасьева (УлГТУ)</p>
+                <p>Специальность: Информационные системы и программирование, 3 курс</p>
+            </div>
+            <div class="card-section1">
+                <h4>Навыки и фокус</h4>
+                <p>Углубленно изучаю клиентскую часть веб-разработки. В своей работе фокусируюсь на создании адаптивных
+                    и логически продуманных интерфейсов</p>
+                <div>
+                    <span class="skills">HTML</span>
+                    <span class="skills">CSS</span>
+                    <span class="skills">JavaScript</span>
+                </div>
+            </div>
+        </section>
+
+        <h2>Проекты</h2>
+
+        <section class="projects-grid">
+            <div class="card-section2">
+                <h4>GameShop — шуточный магазин игр</h4>
+                <p class="expandable-text">Я спроектировала и разработала адаптивный сайт-магазин компьютерных игр.
+                    Основной функционал включает реализацию динамической фильтрации и сортировки товаров в каталоге на
+                    чистом JavaScript. На странице продукта я создала интерактивную галерею с эффектом аккордеона, где
+                    выбранное изображение плавно увеличивается, а соседние сжимаются. Этот подход улучшает
+                    пользовательский опыт и визуально фокусирует внимание на контенте.</p>
+                <button class="read-more-button" onclick="toggleText(this)">Читать дальше</button>
+                <div class="project-skills">
+                    <span class="skills">HTML</span>
+                    <span class="skills">CSS</span>
+                    <span class="skills">JavaScript</span>
+                </div>
+                <p>Роль: Frontend-разработчик.</p>
+                <div class="project-buttons">
+                    <a href="https://jjkklljhdzg.github.io/GameShop/"><button class="dark-button">Demo</button></a>
+                    <a href="https://github.com/jjkklljhdzg/GameShop" class="github-link">
+                        <button class="light-button">
+                            <img src="github_logo.svg" alt="Логотип GitHub">
+                            <span>Исходный код</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card-section2">
+                <h4>Book Reader — веб-приложение для чтения книг</h4>
+                <p class="expandable-text">Создала основные экраны адаптивного веб-приложения с функцией динамической
+                    смены шрифтов.
+                    Реализована версия на чистом стеке (HTML, CSS, JS) и улучшенная версия с использованием
+                    компонентного подхода на Next.js.</p>
+                <button class="read-more-button" onclick="toggleText(this)">Читать дальше</button>
+                <div class="project-skills">
+                    <span class="skills">HTML</span>
+                    <span class="skills">CSS</span>
+                    <span class="skills">JavaScript</span>
+                    <span class="skills">Next.js</span>
+                </div>
+                <p>Роль: Frontend-разработчик.</p>
+                <div class="project-buttons">
+                    <a href="https://jjkklljhdzg.github.io/reader/"><button class="dark-button">Demo</button></a>
+                    <a href="https://github.com/jjkklljhdzg/reader" class="github-link">
+                        <button class="light-button">
+                            <img src="github_logo.svg" alt="Логотип GitHub">
+                            <span>Исходный код</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card-section2">
+                <h4>BookSwipe — агрегатор для подбора книг (в разработке)</h4>
+                <p class="expandable-text">Участвую в командной разработке агрегатора на Next.js в роли лидера команды.
+                    Отвечаю за архитектуру и реализацию ключевых пользовательских сценариев: главная страница, механика
+                    подбора (свайпы), личный кабинет, работа с данными. Координирую команду на всех этапах — от дизайна
+                    и концепции до защиты MVP по направлениям: frontend, backend, базы данных, дизайн-документация.</p>
+                <button class="read-more-button" onclick="toggleText(this)">Читать дальше</button>
+                <div class="project-skills">
+                    <span class="skills">CSS</span>
+                    <span class="skills">Sqlite</span>
+                    <span class="skills">Next.js</span>
+                </div>
+                <p>Роль: Team Lead, Fullstack-разработчик.</p>
+                <div class="project-buttons">
+                    <a href="https://github.com/jjkklljhdzg/BookSwipe" class="github-link">
+                        <button class="light-button">
+                            <img src="github_logo.svg" alt="Логотип GitHub">
+                            <span>Исходный код</span>
+                        </button>
+                    </a>
+                    <a href="https://docs.google.com/document/d/18sEzON0XN76xxalI0KiJxldDH5GsMAtZTndQNP5p0Hs/edit?usp=sharing"
+                        class="doc-link">
+                        <button class="light-button">
+                            <img src="document.svg" alt="Иконка документа">
+                            <span>Дизайн-документ</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleText(button) {
+            const card = button.closest('.card-section2');
+            const text = card.querySelector('.expandable-text');
+
+            card.classList.toggle('expanded');
+
+            if (card.classList.contains('expanded')) {
+                button.textContent = 'Свернуть';
+                // Убираем ограничение по высоте для полного раскрытия
+                text.style.maxHeight = '1000px';
+                text.style.overflow = 'visible';
+            } else {
+                button.textContent = 'Читать дальше';
+                // Возвращаем ограничение
+                text.style.maxHeight = '100px';
+                text.style.overflow = 'hidden';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
